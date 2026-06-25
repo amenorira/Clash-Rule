@@ -1,6 +1,6 @@
 payload:
-  # 2026-06-25 03:23:21
-  # TOTAL: 4341 urls
+  # 2026-06-26 03:42:37
+  # TOTAL: 4342 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -1426,6 +1426,7 @@ payload:
   - '+.genius.com'
   - '+.geph.io'
   - '+.get.app'
+  - '+.get.dappcdn.com'
   - '+.get.dev'
   - '+.get.how'
   - '+.get.page'
