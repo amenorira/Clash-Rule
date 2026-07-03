@@ -1,6 +1,6 @@
 payload:
-  # 2026-07-03 03:05:11
-  # TOTAL: 4360 urls
+  # 2026-07-04 02:57:49
+  # TOTAL: 4361 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -4018,6 +4018,7 @@ payload:
   - '+.webpkgcache.com'
   - '+.webrtc.org'
   - '+.websdr.org'
+  - '+.webshare.io'
   - '+.website.new'
   - '+.webwarper.net'
   - '+.wechatlawsuit.com'
