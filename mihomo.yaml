@@ -53,6 +53,9 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
     - system
 
 # ==> 代理策略组 (Proxy Groups)
@@ -98,6 +101,10 @@ proxy-groups:
     <<: *common-group
     icon: https://raw.githubusercontent.com/amenorira/Clash-Rule/master/icon/Google.png
 
+  - name: "OpenAI"
+    <<: *common-group
+    icon: https://raw.githubusercontent.com/amenorira/Clash-Rule/master/icon/OpenAI.png
+
   - name: "秋风净化"
     type: select
     icon: https://raw.githubusercontent.com/amenorira/Clash-Rule/master/icon/AWAvenue.png
@@ -123,6 +130,7 @@ rules:
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Telegram,电报消息
   - RULE-SET,Google,Google
+  - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Proxy,节点选择
   - RULE-SET,gfw,节点选择
   - RULE-SET,cn,DIRECT
@@ -173,6 +181,12 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/amenorira/Clash-Rule/master/provider/Google.yaml"
     path: ./rule_provider/Google.yaml
+
+  OpenAI:
+    <<: *rule-provider-config
+    behavior: classical
+    url: "https://raw.githubusercontent.com/amenorira/Clash-Rule/master/provider/OpenAI.yaml"
+    path: ./rule_provider/OpenAI.yaml
   
   Proxy:
     <<: *rule-provider-config
