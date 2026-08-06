@@ -32,3 +32,6 @@ payload:
   - DOMAIN,rum.browser-intake-datadoghq.com
   - DOMAIN,setup.workos.com
   - DOMAIN,workos.imgix.net
+
+  - PROCESS-NAME,ChatGPT.exe
+  - PROCESS-NAME,codex.exe
