@@ -1,6 +1,6 @@
 payload:
-  # 2026-08-07 07:46:40
-  # TOTAL: 4369 urls
+  # 2026-08-08 02:36:12
+  # TOTAL: 4368 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -298,7 +298,6 @@ payload:
   - '+.atnext.com'
   - '+.auctions.yahoo.co.jp'
   - '+.audacy.com'
-  - '+.auntology.fandom.com'
   - '+.autodraw.com'
   - '+.av.movie'
   - '+.av01.tv'
@@ -1209,6 +1208,7 @@ payload:
   - '+.falunhr.org'
   - '+.famunion.com'
   - '+.fanbox.cc'
+  - '+.fandom.com'
   - '+.fangeqiang.com'
   - '+.fanglizhi.info'
   - '+.fangong.org'
@@ -1900,7 +1900,6 @@ payload:
   - '+.home.saxo'
   - '+.homedepot.com'
   - '+.homeservershow.com'
-  - '+.hongkong.fandom.com'
   - '+.hongkongfp.com'
   - '+.hongzhi.li'
   - '+.honven.xyz'
