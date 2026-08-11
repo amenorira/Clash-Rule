@@ -1,6 +1,6 @@
 payload:
-  # 2026-08-11 02:39:11
-  # TOTAL: 4372 urls
+  # 2026-08-12 02:42:34
+  # TOTAL: 4373 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -1000,6 +1000,7 @@ payload:
   - '+.disp.cc'
   - '+.disqus.com'
   - '+.dit-inc.us'
+  - '+.divdyn.com'
   - '+.diyin.org'
   - '+.dizhuzhishang.com'
   - '+.dl-laby.jp'
