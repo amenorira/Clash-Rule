@@ -1,6 +1,6 @@
 payload:
-  # 2026-08-19 02:18:16
-  # TOTAL: 4374 urls
+  # 2026-08-20 02:15:23
+  # TOTAL: 4376 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -3151,6 +3151,7 @@ payload:
   - '+.s-cute.com'
   - '+.s.yimg.com'
   - '+.s3-ap-northeast-1.amazonaws.com'
+  - '+.s3.dualstack.us-west-2.amazonaws.com'
   - '+.sacks.com'
   - '+.sacom.hk'
   - '+.sadistic-v.com'
@@ -4096,6 +4097,7 @@ payload:
   - '+.willw.net'
   - '+.wilsoncenter.org'
   - '+.windscribe.com'
+  - '+.windy.com'
   - '+.wingamestore.com'
   - '+.wingy.site'
   - '+.wionews.com'
