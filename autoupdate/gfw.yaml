@@ -1,6 +1,6 @@
 payload:
-  # 2026-08-22 02:18:54
-  # TOTAL: 4377 urls
+  # 2026-08-23 02:11:26
+  # TOTAL: 4379 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -565,6 +565,7 @@ payload:
   - '+.breakgfw.com'
   - '+.breakingtweets.com'
   - '+.breakwall.net'
+  - '+.briarproject.org'
   - '+.brill.com'
   - '+.brizzly.com'
   - '+.broadpressinc.com'
@@ -707,6 +708,7 @@ payload:
   - '+.chat.com'
   - '+.chat.lmsys.org'
   - '+.chatgpt.com'
+  - '+.chatgpt.site'
   - '+.chatpdf.com'
   - '+.chaturbate.com'
   - '+.checkgfw.com'
