@@ -1,37 +1,38 @@
 payload:
-  # > ChatGPT
-  - DOMAIN-SUFFIX,ai.com
-  - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,ct.sendgrid.net
-  - DOMAIN-SUFFIX,featureassets.org
-  - DOMAIN-SUFFIX,featuregates.org
-  - DOMAIN-SUFFIX,intercom.io
-  - DOMAIN-SUFFIX,intercomcdn.com
-  - DOMAIN-SUFFIX,oaistatic.com
-  - DOMAIN-SUFFIX,oaiusercontent.com
-  - DOMAIN-SUFFIX,openai.com
-  - DOMAIN-SUFFIX,prodregistryv2.org
-  - DOMAIN-SUFFIX,statsig.com
-  - DOMAIN-SUFFIX,statsigapi.net
-
-  # > Chat GPT API & CDN
-  - DOMAIN,cdn.openaimerge.com
-  - DOMAIN,cdn.workos.com
-  - DOMAIN,challenges.cloudflare.com
+  - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
-  - DOMAIN,forwarder.workos.com
-  - DOMAIN,humb.apple.com
-  - DOMAIN,images.workoscdn.com
-  - DOMAIN,js.stripe.com
-  - DOMAIN,o207216.ingest.sentry.io
-  - DOMAIN,o33249.ingest.sentry.io
-  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN,openai-api.arkoselabs.com
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN,rum.browser-intake-datadoghq.com
-  - DOMAIN,setup.workos.com
-  - DOMAIN,workos.imgix.net
-
+  - DOMAIN,static.cloudflareinsights.com
+  - DOMAIN-SUFFIX,ai.com
+  - DOMAIN-SUFFIX,algolia.net
+  - DOMAIN-SUFFIX,api.statsig.com
+  - DOMAIN-SUFFIX,auth0.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com
+  - DOMAIN-SUFFIX,events.statsigapi.net
+  - DOMAIN-SUFFIX,featuregates.org
+  - DOMAIN-SUFFIX,host.livekit.cloud
+  - DOMAIN-SUFFIX,identrust.com
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,launchdarkly.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,observeit.net
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+  - DOMAIN-SUFFIX,openaicom.imgix.net
+  - DOMAIN-SUFFIX,segment.io
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,stripe.com
+  - DOMAIN-SUFFIX,turn.livekit.cloud
+  - DOMAIN-KEYWORD,openai
+  - IP-CIDR,24.199.123.28/32
+  - IP-CIDR,64.23.132.171/32
+  - IP-ASN,20473
   - PROCESS-NAME,ChatGPT.exe
   - PROCESS-NAME,codex.exe
