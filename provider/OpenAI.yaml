@@ -33,6 +33,5 @@ payload:
   - DOMAIN-KEYWORD,openai
   - IP-CIDR,24.199.123.28/32
   - IP-CIDR,64.23.132.171/32
-  - IP-ASN,20473
   - PROCESS-NAME,ChatGPT.exe
   - PROCESS-NAME,codex.exe
