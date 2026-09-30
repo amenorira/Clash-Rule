@@ -1,0 +1,101 @@
+payload:
+  # > LocalLan
+  - DOMAIN-SUFFIX,ip6-localhost
+  - DOMAIN-SUFFIX,ip6-loopback
+  - DOMAIN-SUFFIX,lan
+  - DOMAIN-SUFFIX,local
+  - DOMAIN-SUFFIX,localhost
+  - IP-CIDR,0.0.0.0/8,no-resolve
+  - IP-CIDR,10.0.0.0/8,no-resolve
+  - IP-CIDR,100.64.0.0/10,no-resolve
+  - IP-CIDR,127.0.0.0/8,no-resolve
+  - IP-CIDR,172.16.0.0/12,no-resolve
+  - IP-CIDR,192.168.0.0/16,no-resolve
+  - IP-CIDR,198.18.0.0/16,no-resolve
+  - IP-CIDR,224.0.0.0/4,no-resolve
+  - IP-CIDR6,::1/128,no-resolve
+  - IP-CIDR6,fc00::/7,no-resolve
+  - IP-CIDR6,fe80::/10,no-resolve
+  - IP-CIDR6,fd00::/8,no-resolve
+
+  # > Microsoft Network Connectivity Status Indicator
+  - DOMAIN-SUFFIX,msftncsi.com
+  - DOMAIN-SUFFIX,msftconnecttest.com
+
+  # > Microsoft Edge Sync
+  #- DOMAIN,edge.microsoft.com
+
+  # > Microsoft
+  - DOMAIN-SUFFIX,msn.com
+  - DOMAIN-SUFFIX,msn.cn
+
+  # > NTP-Service
+  - DOMAIN-SUFFIX,pool.ntp.org
+  - DOMAIN-SUFFIX,ntp.org.cn
+  - DOMAIN-SUFFIX,ntp.ntsc.ac.cn
+  - DOMAIN-SUFFIX,time.windows.com
+
+  # > Steam
+  - DOMAIN,cm.steampowered.com
+  - DOMAIN,ol.epicgames.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamserver.net
+
+  - DOMAIN-SUFFIX,steamchina.com
+
+  - DOMAIN,dl.steam.clngaa.com
+  - DOMAIN,dl.steam.ksyna.com
+
+  - DOMAIN,gstore.val.manlaxy.com
+
+  - DOMAIN,st.dl.bscstorage.net
+  - DOMAIN,st.dl.eccdnx.com
+  - DOMAIN,st.dl.pinyuncloud.com
+
+  - DOMAIN,steampipe.steamcontent.tnkjmec.com
+
+  - DOMAIN,steampowered.com.8686c.com
+  - DOMAIN,steamstatic.com.8686c.com
+
+  - DOMAIN,steambroadcast.akamaized.net
+  - DOMAIN,steamcdn-a.akamaihd.net
+  - DOMAIN,steamcommunity-a.akamaihd.net
+  - DOMAIN,steamstore-a.akamaihd.net
+  - DOMAIN,steamusercontent-a.akamaihd.net
+  - DOMAIN,steamuserimages-a.akamaihd.net
+
+  # > Adguard local
+  - DOMAIN,local.adguard.org
+
+  # > Wargaming
+  - PROCESS-NAME,wgc.exe
+  #- DOMAIN-SUFFIX,wargaming.net
+  #- DOMAIN-KEYWORD,worldofwarships
+  - DOMAIN,dht.transmissionbt.com
+  #- DOMAIN-SUFFIX,worldofwarships.asia
+  - DOMAIN,dl-wows-gc.wargaming.net
+  #- PROCESS-NAME,UsbEAm Hosts Editor.exe
+
+  # > HIKARI FIELD STORE
+  - DOMAIN-SUFFIX,hikarifield.co.jp
+
+  # > NGA
+  #- DOMAIN,img4.nga.178.com
+  #- DOMAIN,img.nga.178.com
+
+  # > Animeko
+  #- AND,((OR,((PROCESS-NAME,ani.exe),(PROCESS-NAME,me.him188.ani))),(OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve))))
+  - DOMAIN,dht.libtorrent.org
+
+  # > Hugging Face
+  - DOMAIN-SUFFIX,hf-mirror.com
+  - DOMAIN-SUFFIX,hf.co
+  
+  # > Other
+  - DOMAIN-KEYWORD,test-ipv6
+  - DOMAIN-SUFFIX,cycani.org
+  - PROCESS-NAME,HipsDaemon.exe
+  - DOMAIN-KEYWORD,nvidia
+  - DOMAIN-SUFFIX,ip.skk.moe
+  - DOMAIN-SUFFIX,board.zash.run.place
+  - DOMAIN-SUFFIX,1314mc.net
