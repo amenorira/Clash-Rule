@@ -1,6 +1,6 @@
 payload:
-  # 2026-10-01 05:35:53
-  # TOTAL: 4389 urls
+  # 2026-10-02 06:04:32
+  # TOTAL: 4391 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -1398,6 +1398,7 @@ payload:
   - '+.futustatic.com'
   - '+.fututrade.com'
   - '+.fututrustee.com'
+  - '+.fuyin116.com'
   - '+.fw.cm'
   - '+.fxcm-chinese.com'
   - '+.fxnetworks.com'
@@ -2552,6 +2553,7 @@ payload:
   - '+.mubi.com'
   - '+.mullvad.net'
   - '+.multiply.com'
+  - '+.muse.ai'
   - '+.music.amazon.com'
   - '+.musixmatch.com'
   - '+.muzi.com'
