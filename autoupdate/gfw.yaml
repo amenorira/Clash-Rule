@@ -1,6 +1,6 @@
 payload:
-  # 2026-10-02 06:04:32
-  # TOTAL: 4391 urls
+  # 2026-10-03 05:30:36
+  # TOTAL: 4392 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -4010,6 +4010,7 @@ payload:
   - '+.wainao.me'
   - '+.walletconnect.com'
   - '+.walletconnect.org'
+  - '+.wallhaven.cc'
   - '+.wallmama.com'
   - '+.wallpapercasa.com'
   - '+.wallsttv.com'
