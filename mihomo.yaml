@@ -56,7 +56,8 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   direct-nameserver:
-    - system
+    - 119.29.29.29
+    - 223.6.6.6
 
 # ==> TUN 配置
 tun:
