@@ -1,0 +1,26 @@
+payload:
+  - DOMAIN-SUFFIX,jp
+  
+  # DMM
+  - DOMAIN-SUFFIX,dmm.com
+  - DOMAIN-SUFFIX,dmm.co.jp
+  - DOMAIN-SUFFIX,dmmgames.com
+  - DOMAIN-SUFFIX,kumasanfes.com
+  
+  # プリンセスコネクト！Re:Dive
+  - DOMAIN-SUFFIX,api-priconne-redive.cygames.jp
+  - DOMAIN,prd-priconne-redive.akamaized.net
+  - DOMAIN-SUFFIX,cygames.com
+
+  # ティンクルスターナイツ，Twinkle Star Knights
+  - DOMAIN-SUFFIX,twinkle-star-knights.com
+  - DOMAIN-SUFFIX,twinklestarknights.jp
+  - DOMAIN-SUFFIX,dz87n5pasv7ep.cloudfront.net
+
+  # pixiv
+  - DOMAIN-SUFFIX,pixiv.net
+  - DOMAIN-SUFFIX,pximg.net
+  - DOMAIN-SUFFIX,fanbox.cc
+
+  # DLsite
+  - DOMAIN-SUFFIX,dlsite.com
