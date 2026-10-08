@@ -1,7 +1,7 @@
 payload:
   # https://github.com/misakaio/chnroutes2
-  # 4790219 routes were dumped from us-iad01-rs01cn-b at Wed Oct  7 22:00:03 UTC 2026.
-  # Found 61639 routes matching, aggregated to 3897.
+  # 4788059 routes were dumped from us-iad01-rs01cn-b at Thu Oct  8 22:00:03 UTC 2026.
+  # Found 61603 routes matching, aggregated to 3897.
   - '1.1.8.0/24'
   - '1.2.4.0/24'
   - '1.8.1.0/24'
