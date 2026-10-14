@@ -22,9 +22,6 @@ payload:
   - DOMAIN-SUFFIX,msftncsi.com
   - DOMAIN-SUFFIX,msftconnecttest.com
 
-  # > Microsoft Edge Sync
-  #- DOMAIN,edge.microsoft.com
-
   # > Microsoft
   - DOMAIN-SUFFIX,msn.com
   - DOMAIN-SUFFIX,msn.cn
@@ -78,18 +75,6 @@ payload:
 
   # > HIKARI FIELD STORE
   - DOMAIN-SUFFIX,hikarifield.co.jp
-
-  # > NGA
-  #- DOMAIN,img4.nga.178.com
-  #- DOMAIN,img.nga.178.com
-
-  # > Animeko
-  #- AND,((OR,((PROCESS-NAME,ani.exe),(PROCESS-NAME,me.him188.ani))),(OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve))))
-  - DOMAIN,dht.libtorrent.org
-
-  # > Hugging Face
-  - DOMAIN-SUFFIX,hf-mirror.com
-  - DOMAIN-SUFFIX,hf.co
 
   # > Game
   - DOMAIN,api.abyss-prod-r18.dotabyss.dmmgames.com
