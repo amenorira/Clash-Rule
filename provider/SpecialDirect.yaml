@@ -75,9 +75,6 @@ payload:
 
   # > HIKARI FIELD STORE
   - DOMAIN-SUFFIX,hikarifield.co.jp
-
-  # > Game
-  - DOMAIN,api.abyss-prod-r18.dotabyss.dmmgames.com
   
   # > Other
   - DOMAIN-KEYWORD,test-ipv6
