@@ -1,6 +1,6 @@
 payload:
-  # 2026-10-17 04:09:55
-  # TOTAL: 4429 urls
+  # 2026-10-18 03:46:01
+  # TOTAL: 4432 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -61,6 +61,7 @@ payload:
   - '+.6parker.com'
   - '+.6parknews.com'
   - '+.7capture.com'
+  - '+.7x24hrs.com'
   - '+.8-d.com'
   - '+.85cc.us'
   - '+.881903.com'
@@ -2463,7 +2464,9 @@ payload:
   - '+.meripet.com'
   - '+.merit-times.com.tw'
   - '+.messenger.com'
+  - '+.meta.ai'
   - '+.meta.com'
+  - '+.metaaivm.com'
   - '+.metafilter.com'
   - '+.metamask.io'
   - '+.metart.com'
