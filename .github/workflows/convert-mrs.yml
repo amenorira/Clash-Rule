@@ -1,0 +1,97 @@
+name: Update .mrs
+
+on:
+  schedule:
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: convert-mrs
+  cancel-in-progress: true
+
+jobs:
+  update-rules:
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get latest mihomo version
+        id: version
+        run: |
+          $tag = gh release view -R MetaCubeX/mihomo --json tagName --jq ".tagName"
+          Write-Output "version=$tag" >> $env:GITHUB_OUTPUT
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Cache mihomo binary
+        id: cache-mihomo
+        uses: actions/cache@v4
+        with:
+          path: mihomo.exe
+          key: mihomo-${{ steps.version.outputs.version }}-windows-amd64
+
+      - name: Download and extract mihomo
+        if: steps.cache-mihomo.outputs.cache-hit != 'true'
+        run: |
+          gh release download ${{ steps.version.outputs.version }} -R MetaCubeX/mihomo --pattern "*windows-amd64*.zip" --clobber
+          
+          $zipFile = Get-ChildItem -Filter "*windows-amd64*.zip" | Select-Object -First 1
+          Expand-Archive -Path $zipFile -DestinationPath . -Force
+          
+          $exeFile = Get-ChildItem -Filter "mihomo-windows-amd64*.exe" | Select-Object -First 1
+          Move-Item -Path $exeFile -Destination "mihomo.exe" -Force
+          
+          Remove-Item $zipFile -Force
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Download source rule files
+        run: |
+          mkdir -p autoupdate
+          base_url="https://raw.githubusercontent.com/amenorira/Clash-Rule/refs/heads/master/autoupdate"
+          
+          curl -sSL -o autoupdate/gfw.yaml "$base_url/gfw.yaml" &
+          curl -sSL -o autoupdate/cn.yaml "$base_url/cn.yaml" &
+          curl -sSL -o autoupdate/cn_v6.yaml "$base_url/cn_v6.yaml" &
+          curl -sSL -o autoupdate/cndomain.yaml "$base_url/cndomain.yaml" &
+          wait
+        shell: bash
+
+      - name: Convert rules to .mrs format
+        run: |
+          ./mihomo.exe convert-ruleset domain yaml autoupdate/gfw.yaml autoupdate/gfw.mrs
+          ./mihomo.exe convert-ruleset ipcidr yaml autoupdate/cn.yaml autoupdate/cn.mrs
+          ./mihomo.exe convert-ruleset ipcidr yaml autoupdate/cn_v6.yaml autoupdate/cn_v6.mrs
+          ./mihomo.exe convert-ruleset domain yaml autoupdate/cndomain.yaml autoupdate/cndomain.mrs
+        shell: bash
+
+      - name: Verify generated .mrs files are non-empty
+        run: |
+          for f in autoupdate/*.mrs; do
+            if [ ! -s "$f" ]; then
+              echo "❌ $f is empty or missing" >&2
+              exit 1
+            fi
+          done
+        shell: bash
+
+      - name: Commit and push changes if any
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          if [[ $(git status --porcelain autoupdate/*.mrs) ]]; then
+            echo "Changes detected in rule sets. Preparing to commit."
+            git add autoupdate/*.mrs
+            TIME=$(pwsh -Command "[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, 'China Standard Time').ToString('yyyy-MM-dd HH:mm:ss')")
+            git commit -m "Update mrs: $TIME"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+        shell: bash
