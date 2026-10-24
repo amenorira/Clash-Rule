@@ -1,6 +1,6 @@
 payload:
-  # 2026-10-24 04:43:26
-  # TOTAL: 4432 urls
+  # 2026-10-25 03:54:51
+  # TOTAL: 4434 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
   - '+.1-apple.com.tw'
@@ -862,6 +862,7 @@ payload:
   - '+.compileheart.com'
   - '+.connect.facebook.net'
   - '+.conoha.jp'
+  - '+.console.typesafe.ai'
   - '+.contests.twilio.com'
   - '+.cool18.com'
   - '+.coolaler.com'
@@ -1417,6 +1418,7 @@ payload:
   - '+.g.co'
   - '+.g0v.social'
   - '+.g6hentai.com'
+  - '+.ga.jspm.io'
   - '+.gab.com'
   - '+.gabocorp.com'
   - '+.gagaoolala.com'
