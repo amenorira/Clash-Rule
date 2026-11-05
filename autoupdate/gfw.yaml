@@ -1,5 +1,5 @@
 payload:
-  # 2026-11-05 06:57:16
+  # 2026-11-06 06:58:24
   # TOTAL: 4452 urls
   - '+.000webhost.com'
   - '+.0rz.tw'
@@ -2439,7 +2439,6 @@ payload:
   - '+.matters.town'
   - '+.matthewdgreen.wordpress.com'
   - '+.mattwilcox.net'
-  - '+.maven.neoforged.net'
   - '+.mcadforums.com'
   - '+.mcaf.ee'
   - '+.mceindex.com'
@@ -2648,6 +2647,7 @@ payload:
   - '+.nekoslovakia.net'
   - '+.neo-miracle.com'
   - '+.neodb.social'
+  - '+.neoforged.net'
   - '+.neowin.net'
   - '+.nephobox.com'
   - '+.netalert.me'
