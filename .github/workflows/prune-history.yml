@@ -1,0 +1,80 @@
+name: 保留最近三天的提交
+
+on:
+  schedule:
+    - cron: '30 19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prune-history
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: 清理三天前的提交
+        shell: python
+        run: |
+          import subprocess
+          import time
+
+          def git(*args, data=None):
+              result = subprocess.run(['git', *args], input=data, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+              return result.stdout
+
+          cutoff = int(time.time()) - 3 * 86400
+          ref = 'refs/heads/master'
+          head = git('rev-parse', ref).decode().strip()
+          refs = git('ls-remote', '--heads', '--tags', 'origin').decode().splitlines()
+          if refs != [f'{head}\t{ref}']:
+              raise RuntimeError()
+
+          frontiers = {}
+          retained = {}
+          rows = git('rev-list', '--reverse', '--topo-order', '--timestamp', '--parents', head)
+          for row in rows.decode().splitlines():
+              timestamp, oid, *parents = row.split()
+              new_parents = list(dict.fromkeys(ancestor for parent in parents for ancestor in frontiers[parent]))
+              if int(timestamp) < cutoff and oid != head:
+                  frontiers[oid] = new_parents
+                  continue
+
+              raw = git('cat-file', 'commit', oid)
+              header, message = raw.split(b'\n\n', 1)
+              fields = []
+              for line in header.split(b'\n'):
+                  if line.startswith(b' '):
+                      fields[-1] += b'\n' + line
+                  else:
+                      fields.append(line)
+              tree = next(field for field in fields if field.startswith(b'tree '))
+              removed = {b'tree', b'parent', b'gpgsig', b'gpgsig-sha256', b'mergetag'}
+              metadata = [field for field in fields if field.split(b' ', 1)[0] not in removed]
+              new_fields = [tree, *(b'parent ' + parent.encode() for parent in new_parents), *metadata]
+              new_raw = b'\n'.join(new_fields) + b'\n\n' + message
+              new_oid = git('hash-object', '-t', 'commit', '-w', '--stdin', data=new_raw).decode().strip()
+              retained[oid] = new_oid
+              frontiers[oid] = [new_oid]
+
+          new_head = retained[head]
+          if git('rev-parse', f'{head}^{{tree}}') != git('rev-parse', f'{new_head}^{{tree}}'):
+              raise RuntimeError()
+          actual = set(git('rev-list', new_head).decode().splitlines())
+          if actual != set(retained.values()):
+              raise RuntimeError()
+          dates = (line.split() for line in git('rev-list', '--timestamp', new_head).decode().splitlines())
+          if any(int(timestamp) < cutoff and oid != new_head for timestamp, oid in dates):
+              raise RuntimeError()
+          if new_head != head:
+              git('push', f'--force-with-lease={ref}:{head}', 'origin', f'{new_head}:{ref}')
